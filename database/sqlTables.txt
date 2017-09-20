@@ -1,0 +1,44 @@
+CREATE TABLE users
+(
+	userName text not null primary key,
+	password text not null,
+	emailAddress text not null,
+	firstName text not null,
+	lastName text not null,
+	gender character(1) not null,
+	personID text not null
+);
+
+CREATE TABLE authTokens
+(
+	personID text not null,
+	userName text not null,
+	token text not null primary key,
+	timeStamp bigint
+);
+
+CREATE TABLE people
+(
+	personID text not null primary key,
+	descendant text not null,	--username person belongs to
+	firstName text not null,
+	lastName text not null,
+	gender character(1) not null,
+	fatherID text,
+	motherID text,
+	spouseID text
+);
+
+CREATE TABLE events
+(
+	eventID text not null primary key,
+	descendant text not null,	--user event belongs to
+	personID integer not null,		--id of person event belongs to
+	latitude double not null,
+	longitude double not null,
+	country text not null,
+	city text not null,
+	eventType text not null,	    --birth,baptism,marriage,death 
+		 		    		    --christening,other_marriages,etc.
+	year integer not null
+);

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/GridLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:rowCount="8"
+        tools:context=".GridXMLActivity" >
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_column="0"
+            android:layout_row="0"
+            android:padding="0dp"
+            android:text="@string/host_text" />
+
+        <EditText
+            android:id="@+id/host_edit"
+            android:layout_width="200dp"
+            android:layout_height="35dp"
+            android:layout_column="1"
+            android:layout_row="0"
+            android:padding="0dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_column="0"
+            android:layout_row="1"
+            android:padding="0dp"
+            android:text="@string/port_text" />
+
+        <EditText
+            android:id="@+id/port_edit"
+            android:layout_width="200dp"
+            android:layout_height="35dp"
+            android:layout_column="1"
+            android:layout_row="1"
+            android:padding="0dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_column="0"
+            android:layout_row="2"
+            android:padding="0dp"
+            android:text="@string/username_text" />
+
+
+        <EditText
+            android:id="@+id/user_edit"
+            android:layout_width="200dp"
+            android:layout_height="35dp"
+            android:layout_column="1"
+            android:layout_row="2"
+            android:padding="0dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_column="0"
+            android:layout_row="3"
+            android:padding="0dp"
+            android:text="@string/password_text" />
+
+        <EditText
+            android:id="@+id/password_edit"
+            android:layout_width="200dp"
+            android:layout_height="35dp"
+            android:layout_column="1"
+            android:layout_row="3"
+            android:padding="0dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_column="0"
+            android:layout_row="4"
+            android:padding="0dp"
+            android:text="@string/first_text" />
+
+        <EditText
+            android:id="@+id/first_edit"
+            android:layout_width="200dp"
+            android:layout_height="35dp"
+            android:layout_column="1"
+            android:layout_row="4"
+            android:padding="0dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_column="0"
+            android:layout_row="5"
+            android:padding="0dp"
+            android:text="@string/last_text" />
+
+        <EditText
+            android:id="@+id/last_edit"
+            android:layout_width="200dp"
+            android:layout_height="35dp"
+            android:layout_column="1"
+            android:layout_row="5"
+            android:padding="0dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_column="0"
+            android:layout_row="6"
+            android:padding="0dp"
+            android:text="@string/email_text" />
+
+        <EditText
+            android:id="@+id/email_edit"
+            android:layout_width="200dp"
+            android:layout_height="35dp"
+            android:layout_column="1"
+            android:layout_row="6"
+            android:padding="0dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_column="0"
+            android:layout_row="7"
+            android:padding="0dp"
+            android:text="@string/gender_text" />
+
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="35dp"
+            android:layout_column="1"
+            android:layout_row="7"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio_male"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/male_text" />
+
+            <RadioButton android:id="@+id/radio_female"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:text="@string/female_text"
+                android:onClick="onRadioButtonClicked"/>
+        </RadioGroup>
+
+    </GridLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <!--android:orientation="horizontal" >-->
+
+        <Button
+            android:id="@+id/login_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login_button"/>
+        <!--android:style="?android:attr/buttonBarButtonStyle"/>-->
+
+        <Button
+            android:id="@+id/register_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register_button"/>
+        <!--android:style="?android:attr/buttonBarButtonStyle"/>-->
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
